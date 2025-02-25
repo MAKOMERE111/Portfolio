@@ -1,0 +1,223 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/384d8c790c.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+   <div id="header">
+
+
+    <div class="container">
+        <nav id="sidemenu">
+            <img src="Images/batman mask logo.jfif" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onlclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <p>Aspiring Tech Enthusiast</p>
+        <h1>Hi, I am <span>TIMOTHY MAKOMERE</span> from Kenya</h1> 
+    </div> 
+        <div class="header-text"></div>   
+    </div>
+   </div>
+
+
+   <!-- about -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/40e4bdf1-c51c-4889-9668-08d317ec51d5.jfif" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Timothy Makomere is an aspiring tech enthusiast from Kenya, passionate about exploring the world of technology and innovation. Having recently completed high school, he is eager to build a strong foundation in the tech industry, starting with web development and design. Currently, he is working on his personal portfolio website, showcasing his creativity and growing technical skills. With a keen interest in coding, problem-solving, and staying up-to-date with the latest tech trends, Timothy is determined to carve out a path in the industry. His dedication to learning and building projects reflects his ambition to make an impact in the tech world. </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+            
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>Creating a website</li>
+                        <li><span>CSS</span><br>Styling a website</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Billionaire Company</span> CEO</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2025-present</span><br>Ajira AWS re/START</li>
+                        <li><span>2021-2024</span><br>St. Joseph Kitale</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+   </div>
+   <!-- services -->
+    <div class="services">
+        <div class="container">
+           <h1 class="sub-title">My Services</h1>
+           <div class="services-list">
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2>Web creation</h2>
+                <p>I can create a website</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-css"></i>
+                <h2>Web styling</h2>
+                <p>I can style a website</p>
+                <a href="#">Learn more</a>
+            </div>
+           </div> 
+        </div>
+    </div>
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/work-1.jpg">
+                <div class="layer">
+                    <h3>Aesthetic Wear</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-2.jpg">
+                <div class="layer">
+                    <h3>Range Rover</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work-3.jpg">
+                <div class="layer">
+                    <h3>Black Always</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+     <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p> <i class="fa-regular fa-paper-plane"></i>timothymakomere111@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>+254745962246</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/timothy-makomere" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2" >Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="copyright">
+        <p>Copyright by Batman</p>
+     </div>
+</div>
+
+
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+   </script>
+
+   <script>
+    var sidemenu = document.getElementById("sidemenu")
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+   </script>
+
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzkMta_PW4EF9WyJ7ZssO3s5PbAv3lJEXK87paKFHsZJqlUepEohcD0dRwSjq6oC2sn/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = "";
+        }, 5000);
+
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+  </script>
+
+  <script>
+    function opentab(tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+  </script>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+  </script>
+
+ </body>
+ </html>
